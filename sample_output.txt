@@ -1,0 +1,29 @@
+DISTRIBUTED COMMUNICATION NETWORK SIMULATOR
+Available distributed processes: P1, P2, P3, P4
+
+Example 1: Point-to-point
+Sender: P1
+Receiver: P2
+Message: Hello P2
+SUCCESS: P1 sent a message to P2.
+P2 inbox: M1 | From: P1 | Type: UNICAST | Message: Hello P2
+
+Example 2: Broadcast
+Sender: P1
+Message: System maintenance at 5 PM
+SUCCESS: P1 broadcast a message to all other processes.
+P2, P3 and P4 each receive a BROADCAST message.
+
+Example 3: Multicast
+Sender: P2
+Receivers: P1,P4
+Message: Project meeting
+SUCCESS: P2 multicast a message to ['P1', 'P4'].
+Only P1 and P4 receive the MULTICAST message.
+
+Example 4: Request-response
+Requester: P1
+Service process: P3
+Request: Send server status
+P3 receives request: Send server status
+P3 sends ACK: Send server status to P1.
